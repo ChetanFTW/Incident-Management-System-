@@ -1,7 +1,4 @@
-version: "3.9"
-
 services:
-  # ── Databases ────────────────────────────────────────────────
   postgres:
     image: timescale/timescaledb:latest-pg15
     container_name: ims_postgres
@@ -52,7 +49,6 @@ services:
       timeout: 5s
       retries: 10
 
-  # ── Backend ──────────────────────────────────────────────────
   backend:
     build:
       context: ./backend
@@ -77,7 +73,6 @@ services:
       timeout: 5s
       retries: 5
 
-  # ── Frontend ─────────────────────────────────────────────────
   frontend:
     build:
       context: ./frontend
@@ -87,12 +82,16 @@ services:
     ports:
       - "3000:3000"
     environment:
+      # These are used by the BROWSER (your laptop), not the container
+      # So localhost:8000 is correct — the browser hits your host machine
       - VITE_API_URL=http://localhost:8000
       - VITE_WS_URL=ws://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
     depends_on:
       - backend
 
-  # ── Prometheus ───────────────────────────────────────────────
   prometheus:
     image: prom/prometheus:latest
     container_name: ims_prometheus
@@ -105,10 +104,7 @@ services:
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
-    depends_on:
-      - backend
 
-  # ── Grafana (bonus: metrics dashboard) ───────────────────────
   grafana:
     image: grafana/grafana:latest
     container_name: ims_grafana

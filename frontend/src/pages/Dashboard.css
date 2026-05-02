@@ -1,0 +1,162 @@
+/* Page background (same vibe as login) */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #363636, #e0f2fe);
+  padding-bottom: 40px;
+  font-family: sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.dashboard-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.dashboard-sub {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  background: #f3f4f6;
+}
+
+.filter-btn.active {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+/* Glass card */
+.card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  overflow-x: auto;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead {
+  text-align: left;
+  font-size: 12px;
+  color: #666;
+}
+
+th {
+  padding: 10px;
+}
+
+tbody tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+td {
+  padding: 10px;
+}
+
+/* Alignments */
+.right {
+  text-align: right;
+}
+
+.td-mono {
+  font-family: monospace;
+  color: #444;
+}
+
+.td-title {
+  font-weight: 500;
+}
+
+.td-muted {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #444;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #555;
+}
+
+.empty-state .icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background: #f3f4f6;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
