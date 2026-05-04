@@ -1,6 +1,7 @@
 """
 All Prometheus metrics for the IMS backend.
 Import from here — never create metrics inline in route handlers.
+
 """
 from prometheus_client import Counter, Gauge, Histogram
 
