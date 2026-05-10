@@ -1,6 +1,6 @@
 #  Incident Management System (IMS)
 
-A mission-critical system that monitors distributed infrastructure (APIs, Databases, Caches, Queues), ingests failure signals at high throughput, and manages the full incident lifecycle from detection to closure — with mandatory Root Cause Analysis.
+A mission-critical system that monitors distributed infrastructure (APIs, Databases, Caches, Queues), ingests failure signals at high throughput, and manages the full incident lifecycle from detection to closure with mandatory Root Cause Analysis.
 
 
 ---
