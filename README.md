@@ -258,7 +258,7 @@ P2 (Cache, NoSQL) → Warning alert
 
 ---
 
-## Bonus Features
+## Features
 
 | Feature | Details |
 |---------|---------|
@@ -272,10 +272,3 @@ P2 (Cache, NoSQL) → Warning alert
 
 ---
 
-## PR History
-
-| PR | Branch | What shipped |
-|----|--------|-------------|
-| #1 | `feat/scaffold` | Docker Compose, Dockerfiles, base app skeleton |
-| #2 | `feat/full-implementation` | Complete backend + frontend |
-| #3 | `feat/docs-and-tests` | README, docs, tests, seed script |
