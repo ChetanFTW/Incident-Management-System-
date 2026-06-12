@@ -5,6 +5,16 @@ A mission-critical system that monitors distributed infrastructure (APIs, Databa
 
 ---
 
+<table>
+  <tr>
+    <td><img src="frontend/src/components/Dashboard.png" alt="Dashboard" width="450"></td>
+    <td><img src="frontend/src/components/Incidents.png" alt="Incidents" width="450"></td>
+  </tr>
+</table>
+
+
+frontend/src/components/Dashboard.png
+
 ## What This System Does
 
 When something breaks in production (e.g. your database goes down), your services start firing thousands of error signals per second. This system:
